@@ -53,7 +53,7 @@ def create_professional_ico(input_path, output_path):
 
 # --- Execução ---
 # Substitua pelo nome do seu arquivo gerado
-input_file = "icone_em_HD.png" 
-output_file = "warp.ico"
+input_file = "iconewarp.png" 
+output_file = "warpaicore.ico"
 
 create_professional_ico(input_file, output_file)
