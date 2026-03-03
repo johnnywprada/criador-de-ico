@@ -15,7 +15,7 @@ def make_square(im, min_size=256, fill_color=(0, 0, 0, 0)):
 def create_professional_ico(input_path, output_path):
     try:
         img = Image.open(input_path)
-        
+
         # Garante que estamos trabalhando com RGBA (transparência)
         if img.mode != 'RGBA':
             img = img.convert('RGBA')
@@ -27,7 +27,7 @@ def create_professional_ico(input_path, output_path):
         # A ordem importa: do maior para o menor.
         # 256px é para views "Extra Large", 16px é para "Details/List view"
         icon_sizes = [(256, 256), (128, 128), (64, 64), (48, 48), (32, 32), (16, 16)]
-        
+
         batch_images = []
 
         # Passo 3: Reamostragem de alta qualidade
@@ -40,9 +40,9 @@ def create_professional_ico(input_path, output_path):
         # O formato ICO permite embutir várias imagens no mesmo arquivo.
         # 'append_images' adiciona as outras resoluções além da primeira.
         batch_images[0].save(
-            output_path, 
-            format='ICO', 
-            sizes=icon_sizes, 
+            output_path,
+            format='ICO',
+            sizes=icon_sizes,
             append_images=batch_images[1:]
         )
 
@@ -53,7 +53,7 @@ def create_professional_ico(input_path, output_path):
 
 # --- Execução ---
 # Substitua pelo nome do seu arquivo gerado
-input_file = "iconewarp.png" 
-output_file = "warpaicore.ico"
+input_file = "foxia.png"
+output_file = "foxia.ico"
 
 create_professional_ico(input_file, output_file)
